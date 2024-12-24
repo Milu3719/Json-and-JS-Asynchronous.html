@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>JS</title>
+
+
+</head>
+
+<body>
+
+    <p id="result"></p>
+
+    <h2>JavaScript async / await</h2>
+    <h1 id="result"></h1>
+
+    <h4>JS promise</h4>
+    <p id="demo"></p>
+    
+    <script>
+   var myobj = {name:"GOAT", age:"1000", grade:"10"};
+   var myJSON = JSON.stringify(myobj);//convrts obj to JSON TO SEND DATA
+   var myobj = JSON.parse(myJSON);//CONVERTS JSON to objct to recive data
+   document.getElementById("result").innerHTML = myobj.name;
+
+   async function add(a,b) {
+    let response = await a + b;
+    display(response)
+   }
+
+   function display(some){
+    document.getElementById("result").innerHTML = some;
+   }
+   add(25,50)
+
+   function myDisplayer(some){
+    document.getElementById("demo"),innerHTML = some;
+   }
+
+   function sum(a,b) {
+    var sum = a+b
+    myDisplayer(sum);
+   }
+
+   let myPromise = new myPromise(function(myresolve, myreject){
+//producing code may take some time
+let X = 0; //some code(try to change x to 5)
+if (x == 0) {
+    myresolve("OK"); //when succesful
+} 
+else {
+    myReject("Error")//when error
+}
+   });
+   // consuming code - must wait for fulfilled promise
+   myPromise.then(
+    function(value) {sum(10,10)},//code is succesful
+    function(error) { sum(error) }//code is error
+   ) ;
+
+
+    </script>
+
+</body>
